@@ -87,12 +87,6 @@ lumos/
 
 ---
 
-## 📷 Preview
-
-*(Add screenshots or demo GIFs here)*
-
----
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
