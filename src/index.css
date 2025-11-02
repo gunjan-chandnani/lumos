@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MindSpace Design System - Therapeutic & Healing Colors 
+All colors MUST be HSL for proper theming.
+*/
+
+@layer base {
+  :root {
+    /* Base Colors - Calming & Therapeutic */
+    --background: 155 30% 97%;
+    --foreground: 180 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 15% 15%;
+
+    /* Therapeutic Primary - Calming Teal */
+    --primary: 162 45% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Uplifting Secondary - Warm Coral */
+    --secondary: 15 75% 70%;
+    --secondary-foreground: 180 15% 15%;
+
+    /* Mindful Muted - Soft Sage */
+    --muted: 155 20% 85%;
+    --muted-foreground: 180 20% 45%;
+
+    /* Healing Accent - Gentle Lavender */
+    --accent: 265 25% 75%;
+    --accent-foreground: 180 15% 15%;
+
+    /* Wellness Colors */
+    --wellness-primary: 162 45% 40%;
+    --wellness-secondary: 15 75% 70%;
+    --wellness-accent: 265 25% 75%;
+    --wellness-success: 145 60% 50%;
+    --wellness-warning: 35 85% 65%;
+    
+    /* Therapeutic Gradients */
+    --gradient-healing: linear-gradient(135deg, hsl(162 45% 40%), hsl(145 60% 50%));
+    --gradient-uplifting: linear-gradient(135deg, hsl(15 75% 70%), hsl(35 85% 65%));
+    --gradient-mindful: linear-gradient(135deg, hsl(265 25% 75%), hsl(155 30% 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(162 45% 40%), hsl(15 75% 70%));
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 155 20% 85%;
+    --input: 155 20% 85%;
+    --ring: 162 45% 40%;
+
+    --radius: 1rem;
+    
+    /* Therapeutic Shadows */
+    --shadow-gentle: 0 4px 20px hsl(162 45% 40% / 0.1);
+    --shadow-warm: 0 8px 30px hsl(15 75% 70% / 0.15);
+    --shadow-mindful: 0 6px 25px hsl(265 25% 75% / 0.12);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: radial-gradient(ellipse at top, hsl(162 45% 40% / 0.1), transparent),
+                      radial-gradient(ellipse at bottom right, hsl(15 75% 70% / 0.08), transparent);
+  }
+}
+
+@layer components {
+  /* Therapeutic Component Styles */
+  .wellness-gradient-bg {
+    background: var(--gradient-healing);
+  }
+  
+  .uplifting-gradient-bg {
+    background: var(--gradient-uplifting);
+  }
+  
+  .mindful-gradient-bg {
+    background: var(--gradient-mindful);
+  }
+  
+  .hero-gradient-bg {
+    background: var(--gradient-hero);
+  }
+  
+  .gentle-shadow {
+    box-shadow: var(--shadow-gentle);
+  }
+  
+  .warm-shadow {
+    box-shadow: var(--shadow-warm);
+  }
+  
+  .mindful-shadow {
+    box-shadow: var(--shadow-mindful);
+  }
+}
+
+@layer utilities {
+  /* Animation utilities for chat messages */
+  .animate-message-in {
+    animation: messageIn 0.3s ease-out;
+  }
+
+  @keyframes messageIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+}
