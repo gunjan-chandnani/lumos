@@ -18,7 +18,7 @@ Go to: https://console.cloud.google.com/
 
 ### 3. Configure OAuth 2.0 Credentials
 1. Go to **APIs & Services** → **Credentials**
-2. Find your OAuth 2.0 Client ID: `177609097645-5vtrj08tlph94oiue0j7j8tahblo56ff`
+2. Find your OAuth 2.0 Client ID: `684970879775-1k4hp1n05dm2ejhbqgfec9r2jd318lgh.apps.googleusercontent.com`
 3. Click the **pencil icon** to edit it
 
 ### 4. Add Authorized Origins
